@@ -1,0 +1,55 @@
+.form_group {
+  width: 100%;
+  position: relative;
+  margin-bottom: 1.25rem;
+}
+
+.form_label {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+}
+
+.form_control {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px 15px;
+}
+
+.form_radio {
+  cursor: pointer;
+}
+
+.form_radio_laabel {
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.form_invalid {
+  font-size: 1rem;
+  color: red;
+}
+
+.form_submit {
+  background-color: #0064c8;
+  color: #fff;
+  border: 1px solid transparent;
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 6px 30px;
+  border-radius: 5px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  margin-top: 1rem;
+}
+.form_submit:hover {
+  background-color: transparent;
+  border-color: #0064c8;
+  color: #0064c8;
+}

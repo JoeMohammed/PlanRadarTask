@@ -1,24 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense } from "react";
+import { Routes, Route } from "react-router-dom";
+const Layout = React.lazy(() => import("./layout"));
+const HomePage = React.lazy(() => import("./pages/home"));
+const CreateTicketPage = React.lazy(() => import("./pages/createTicket"));
+const EditTicket = React.lazy(() => import("./pages/editTicket/editTicket"));
+const Loader = React.lazy(() => import("./components/loader"));
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Layout>
+        <Routes>
+          <Route
+            index
+            path="/"
+            element={
+              <Suspense fallback={<Loader />}>
+                <HomePage />
+              </Suspense>
+            }
+          />
+          <Route
+            path="create-ticket"
+            element={
+              <Suspense fallback={<Loader />}>
+                <CreateTicketPage />
+              </Suspense>
+            }
+          />
+          <Route
+            path="edit-ticket/:id"
+            element={
+              <Suspense fallback={<Loader />}>
+                <EditTicket />
+              </Suspense>
+            }
+          />
+        </Routes>
+      </Layout>
+    </>
   );
 }
 

@@ -1,0 +1,58 @@
+/* ________________________________ Card Style ____________________________________ */
+.card {
+  padding: 1.25rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  height: 100%;
+}
+
+.card_header {
+  margin-bottom: 1.25rem;
+}
+
+.card_title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.card_body {
+  margin-bottom: 1.25rem;
+}
+
+.card_footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card_footer button, .card_footer a {
+  padding: 5px 25px;
+  font-size: 1rem;
+  border-radius: 5px;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border: 1px solid transparent;
+  display: block;
+}
+.card_footer__edit {
+  background-color: #ffcc00;
+}
+.card_footer__delete {
+  background-color: #ff0000;
+}
+.card_footer__edit:hover {
+  background-color: transparent;
+  color: #ffcc00;
+  border-color: #ffcc00;
+}
+.card_footer__delete:hover {
+  background-color: transparent;
+  color: #ff0000;
+  border-color: #ff0000;
+}
+
+/* ________________________________ Card Style ____________________________________ */
